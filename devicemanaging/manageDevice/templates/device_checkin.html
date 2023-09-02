@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Device Check In</title>
+</head>
+<body>
+    <h1>Check In {{ device.name }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        
+        {{ form.return_condition.label_tag }}
+        {{ form.return_condition }}
+        
+        <input type="submit" value="Check In">
+    </form>
+
+    <a href="{% url 'form_submissions' %}">View Form Submissions</a>
+</body>
+</html>

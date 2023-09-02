@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Device List</title>
+</head>
+<body>
+    <h1>Devices at {{ company.name }}</h1>
+    <ul>
+        {% for device in devices %}
+            <li>
+                {{ device.name }}
+                <a href="{% url 'device_checkout' device.id %}">Check Out</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

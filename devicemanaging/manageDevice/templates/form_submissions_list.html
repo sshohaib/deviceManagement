@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Submissions</title>
+</head>
+<body>
+    <h1>Check-Out Forms</h1>
+    <ul>
+        {% for log in check_out_logs %}
+            <li>
+                Device: {{ log.device.name }}<br>
+                Employee: {{ log.employee.name }}<br>
+                Condition: {{ log.checkout_condition }}<br>
+                Check-Out Time: {{ log.checkout_time }}<br>
+            </li>
+        {% empty %}
+            <p>No check-out forms available.</p>
+        {% endfor %}
+    </ul>
+
+    <h1>Check-In Forms</h1>
+    <ul>
+        {% for log in check_in_logs %}
+            <li>
+                Device: {{ log.device.name }}<br>
+                Employee: {{ log.employee.name }}<br>
+                Condition: {{ log.return_condition }}<br>
+                Check-Out Time: {{ log.checkout_time }}<br>
+                Check-In Time: {{ log.return_time }}<br>
+            </li>
+        {% empty %}
+            <p>No check-in forms available.</p>
+        {% endfor %}
+    </ul>
+</body>
+</html>

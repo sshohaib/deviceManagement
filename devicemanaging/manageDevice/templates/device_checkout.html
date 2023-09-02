@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Device Check Out</title>
+</head>
+<body>
+    <h1>Check Out {{ device.name }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        
+        {{ form.employee.label_tag }}
+        {{ form.employee }}
+        
+        {{ form.checkout_condition.label_tag }}
+        {{ form.checkout_condition }}
+        
+        <input type="submit" value="Check Out">
+    </form>
+
+    <a href="{% url 'form_submissions' %}">View Form Submissions</a>
+</body>
+</html>
