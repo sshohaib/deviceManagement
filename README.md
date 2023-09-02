@@ -4,8 +4,8 @@ A tool for companies for managing devices among the its employees
 !!!!Please read this before execution!!!!
 
 superuser{
-      username: shoha
-      password: repliq1234
+      username: 'shoha'
+      password: 'repliq1234'
 }
 
 Getting Started
@@ -16,14 +16,18 @@ Open terminal using Ctrl + Alt + T. Run the following command
    
 Create and activate virtual environment using
 
-   virtualenv -p python3 devicemanage
+    virtualenv -p python3 devicemanage
 
     devicemanage\Scripts\activate
 
 
 
-Run Steps:
-   cd devicemanaging
-   python manage.py makemigrations
-   python manage.py migrate
-   python manage.py runserver
+Run Steps
+
+    cd devicemanaging
+            
+    python manage.py makemigrations
+   
+    python manage.py migrate
+   
+    python manage.py runserver
