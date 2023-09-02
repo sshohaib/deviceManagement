@@ -1,6 +1,6 @@
 #creating new form for check in - check out.
 from django import forms
-from .models import Employee, Device
+from .models import Employee
 
 class DeviceLogForm(forms.Form):
     employee = forms.ModelChoiceField(
